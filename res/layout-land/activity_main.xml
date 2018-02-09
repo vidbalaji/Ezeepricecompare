@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<TabHost xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@android:id/tabhost"
+
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <EditText
+        android:id="@+id/searchText"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:ems="10"
+        android:hint="Search Product Title"
+        android:inputType="text" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="415dp"
+
+        android:layout_marginTop="70dp"
+        android:orientation="horizontal"
+        android:scrollbarStyle="outsideOverlay"
+        android:scrollbars="horizontal|vertical">
+
+
+        <FrameLayout
+            android:layout_width="0dip"
+            android:layout_height="match_parent"
+            android:layout_weight="0.13">
+
+            <TabWidget
+                android:id="@android:id/tabs"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone" />
+
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:orientation="vertical">
+
+                <ImageButton
+                    android:id="@+id/amazonTab"
+                    style="@style/Widget.AppCompat.Button.Borderless"
+                    android:layout_width="fill_parent"
+                    android:layout_height="0dip"
+                    android:layout_weight="1.0"
+                    android:background="@drawable/butttondrawable"
+                    android:elevation="13dp"
+                    android:onClick="tabHostHandler"
+                    android:src="@mipmap/amazon"
+                    android:text="Tab1" />
+
+                <ImageButton
+                    android:id="@+id/flipkartTab"
+                    style="@style/Widget.AppCompat.Button.Borderless"
+                    android:layout_width="fill_parent"
+                    android:layout_height="0dip"
+                    android:layout_weight="1.0"
+                    android:background="@drawable/butttondrawable1"
+                    android:onClick="tabHostHandler"
+                    android:src="@mipmap/flipkart"
+                    android:text="Tab2" />
+
+                <ImageButton
+                    android:id="@+id/ebayTab"
+                    android:layout_width="fill_parent"
+                    android:layout_height="0dip"
+                    android:layout_weight="1.0"
+                    android:background="@drawable/butttondrawable3"
+                    android:onClick="tabHostHandler"
+                    android:src="@mipmap/ebay"
+                    android:text="Tab3" />
+
+
+            </LinearLayout>
+
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@android:id/tabcontent"
+            android:layout_width="0dip"
+            android:layout_height="match_parent"
+            android:layout_weight="0.8">
+
+        </FrameLayout>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/textSearch"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:text="search product:"
+        android:textSize="12sp" />
+
+
+</TabHost>

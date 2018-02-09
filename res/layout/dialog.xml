@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:text="Check All"
+            android:layout_marginRight="7dip"
+            android:id="@+id/btnCheckAll"
+            android:layout_height="wrap_content">
+        </Button>
+        <Button
+            android:layout_width="wrap_content"
+            android:text="Clear All"
+            android:id="@+id/btnClearAll"
+            android:layout_height="wrap_content">
+        </Button>
+        <Button
+            android:layout_width="wrap_content"
+            android:text="OK"
+            android:layout_marginRight="7dip"
+            android:id="@+id/btnOk"
+            android:layout_height="wrap_content"
+            >
+
+        </Button>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/myYellow"
+        android:text="Select By Category:"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body2" />
+
+    <ListView
+        android:id="@+id/lvCheckBox"
+        android:layout_width="fill_parent"
+        android:layout_height="283dp"
+        android:cacheColorHint="@null"
+        android:fadingEdge="none"></ListView>
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/myYellow"
+        android:text="Sort By Price:"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+        android:textStyle="bold" />
+
+    <Spinner
+        android:id="@+id/sortSpinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>
